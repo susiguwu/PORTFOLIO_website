@@ -2,47 +2,47 @@ let currentGalleryIndex = 0; // 目前顯示的畫廊索引，從 0 開始
 
 const galleries = [
     [ //sosig gallery1
-        { src: './img/sosigWORK/photo1.gif', caption: '這是作品1的說明文字' },
-        { src: './img/sosigWORK/photo2.gif', caption: 'Twitch Emote _made by Lynn' },
-        { src: './img/sosigWORK/photo3.png', caption: '這是作品3的說明文字' },
-        { src: './img/sosigWORK/photo4.jpg', caption: '這是作品4的說明文字' },
-        { src: './img/sosigWORK/photo5.jpg', caption: '這是作品5的說明文字' },
-        { src: './img/sosigWORK/photo6.png', caption: '這是作品6的說明文字' },
-        { src: './img/sosigWORK/photo7.png', caption: '這是作品7的說明文字' },
-        { src: './img/sosigWORK/photo8.png', caption: '這是作品8的說明文字' }
+        { src: './img/sosigWORK/photo1.gif', caption: 'animated emot for Meiy_vl' },
+        { src: './img/sosigWORK/photo2.gif', caption: '' },
+        { src: './img/sosigWORK/photo3.png', caption: '' },
+        { src: './img/sosigWORK/photo4.jpg', caption: '' },
+        { src: './img/sosigWORK/photo5.jpg', caption: '' },
+        { src: './img/sosigWORK/photo6.png', caption: '' },
+        { src: './img/sosigWORK/photo7.png', caption: '' },
+        { src: './img/sosigWORK/photo8.png', caption: '' }
     ],
 
     [ //sosig gallery2
-        { src: './img/sosigWORK/photo9.png', caption: '這是作品9的說明文字' },
-        { src: './img/sosigWORK/photo10.png', caption: '這是作品2的說明文字' },
-        { src: './img/sosigWORK/photo11.png', caption: '這是作品3的說明文字' },
-        { src: './img/sosigWORK/photo12.png', caption: '這是作品4的說明文字' },
-        { src: './img/sosigWORK/photo13.png', caption: '這是作品5的說明文字' },
-        { src: './img/sosigWORK/photo14.png', caption: '這是作品6的說明文字' },
-        { src: './img/sosigWORK/photo15.png', caption: '這是作品7的說明文字' },
-        { src: './img/sosigWORK/photo16.png', caption: '這是作品8的說明文字' }
+        { src: './img/sosigWORK/photo9.png', caption: '' },
+        { src: './img/sosigWORK/photo10.png', caption: '' },
+        { src: './img/sosigWORK/photo11.png', caption: '' },
+        { src: './img/sosigWORK/photo12.png', caption: '' },
+        { src: './img/sosigWORK/photo13.png', caption: '' },
+        { src: './img/sosigWORK/photo14.png', caption: '' },
+        { src: './img/sosigWORK/photo15.png', caption: '' },
+        { src: './img/sosigWORK/photo16.png', caption: '' }
     ],
 
     [ // shan gallery1
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品2的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
-        { src: './img/photo1.png', caption: '這是作品1的說明文字' },
+        { src: './img/shanWORK/photo1.jpg', caption: '' },
+        { src: './img/shanWORK/photo2.jpg', caption: '' },
+        { src: './img/shanWORK/photo3.jpg', caption: '' },
+        { src: './img/shanWORK/photo4.jpg', caption: '' },
+        { src: './img/shanWORK/photo5.jpg', caption: '' },
+        { src: './img/shanWORK/photo6.jpg', caption: '' },
+        { src: './img/shanWORK/photo7.jpg', caption: '' },
+        { src: './img/shanWORK/photo8.jpg', caption: '' },
     ],
 
     [ // shan gallery2
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品2的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
-        { src: './img/sosigpfp.png', caption: '這是作品1的說明文字' },
+        { src: './img/shanWORK/photo9.jpg', caption: '' },
+        { src: './img/shanWORK/photo10.jpg', caption: '' },
+        { src: './img/shanWORK/photo11.jpg', caption: '' },
+        { src: './img/shanWORK/photo12.jpg', caption: '' },
+        { src: './img/shanWORK/photo13.jpg', caption: '' },
+        { src: './img/shanWORK/photo14.jpg', caption: '' },
+        { src: './img/shanWORK/photo15.jpg', caption: '' },
+        { src: './img/shanWORK/photo16.jpg', caption: '' },
     ]
     
 ];

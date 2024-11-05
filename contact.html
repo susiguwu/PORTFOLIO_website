@@ -102,42 +102,55 @@
 <!-- JavaScript  -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const cards = document.querySelectorAll('.cards');
+    const cards = document.querySelectorAll('.cards');
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
 
-        cards.forEach(card => {
-            let isFlipped = false; // 標記卡片是否切換圖片
+    cards.forEach(card => {
+        let isFlipped = false; // 標記卡片是否切換圖片
 
-            // 點擊卡片事件
-            card.addEventListener('click', (event) => {
-                // 檢查點擊的元素是否在 `.button-group` 內，若是則停止後續操作
-                if (event.target.closest('.button-group')) return;
+        card.addEventListener('click', (event) => {
+            // 檢查點擊的元素是否在 `.button-group` 內，若是則停止後續操作
+            if (event.target.closest('.button-group')) return;
 
-                // 放大或縮小卡片
-                const isExpanded = card.classList.toggle('expanded'); // 切換放大狀態
+            // 防止事件冒泡，避免點擊圖片時直接觸發遮罩的點擊事件
+            event.stopPropagation();
 
-                // 切換圖片
-                const cardInner = card.querySelector('.card-inner');
-                if (isFlipped) {
-                    cardInner.style.transform = "rotateY(0deg)"; // 回到原來的圖片
-                } else {
-                    cardInner.style.transform = "rotateY(180deg)"; // 切換到另一張圖片
-                }
-                isFlipped = !isFlipped; // 切換狀態
-            });
-        });
+            // 放大卡片並顯示遮罩
+            card.classList.add('expanded'); // 添加放大狀態
+            overlay.style.display = 'block'; // 顯示遮罩
 
-        // 點擊任何地方關閉擴展的卡片
-        document.addEventListener('click', (event) => {
-            cards.forEach(card => {
-                const isExpanded = card.classList.contains('expanded');
-                if (isExpanded && !card.contains(event.target)) {
-                    card.classList.remove('expanded'); // 縮小卡片
-                    const cardInner = card.querySelector('.card-inner');
-                    cardInner.style.transform = "rotateY(0deg)"; // 重置圖片
-                }
-            });
+            // 隱藏 button-group
+            const buttonGroup = card.querySelector('.button-group');
+            if (buttonGroup) {
+                buttonGroup.style.display = 'none'; // 隱藏按鈕組
+            }
+
+            // 切換圖片
+            const cardInner = card.querySelector('.card-inner');
+            if (isFlipped) {
+                cardInner.style.transform = "rotateY(0deg)"; // 回到原來的圖片
+            } else {
+                cardInner.style.transform = "rotateY(180deg)"; // 切換到另一張圖片
+            }
+            isFlipped = !isFlipped; // 切換狀態
         });
     });
+
+    
+    document.addEventListener('click', (event) => {
+        cards.forEach(card => {
+            const isExpanded = card.classList.contains('expanded');
+            if (isExpanded && !card.contains(event.target)) {
+                card.classList.remove('expanded'); // 縮小卡片
+                const cardInner = card.querySelector('.card-inner');
+                cardInner.style.transform = "rotateY(0deg)"; // 重置圖片
+            }
+        });
+    });
+});
+
 
 
 </script>
