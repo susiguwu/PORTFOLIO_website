@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <header>
+        <nav class="nav_b">
+            <a href="index.html">
+                <img class="LOGO" src="./img/LOGO.png" alt="Logo">
+            </a>
+            <div class="btns">
+                <button class="works" type="button" onclick="window.location.href='works.html'">Works</button>
+                <button class="archive" type="button" onclick="window.location.href='archive.html'">Archive</button>
+                <button class="info" type="button" onclick="window.location.href='info.html'">Info</button>
+                <button class="schedule" type="button" onclick="window.location.href='schedule.html'">Schedule</button>
+                <button class="contact" type="button" onclick="window.location.href='contact.html'">Contact</button>
+            </div>
+        </nav>
+    </header>
+</head>
+
+<body>
+
+    <main>
+        <div class="choosedesigner">
+            <img class="CHOOSEarrow "src="./img/arrow.png" alt="arrow">
+            <h1>CHOOSE<br>DESIGNER</h1>
+            
+            <div class="fuckyou">
+                <div class="container">
+                    <img class="d1" src="./img/sosigpfp.png" alt="設計師1" onclick="showDesigner('sosig')" style="cursor: pointer;"/>
+                    <img class="d2" src="./img/test.gif" alt="設計師2" onclick="showDesigner('shan')" style="cursor: pointer;"/>
+                </div>
+                <div class="designer-names">
+                    <p>Lynn</p>
+                    <p>Chiashan</p>
+                </div>
+            </div>
+        </div>
+
+        <img class="homeimg" id="homeImg" src="./img/homeImage.gif">
+
+        <div class="main2">
+            <!--GALLERY FUNCTION-->
+            <div id="lightbox" class="lightbox" style="display: none;">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <div class="lightbox-content">
+                    <img id="lightboxImg" src="" alt="大圖">
+                    <div id="caption" class="caption">圖片說明</div>
+                    <div class="favorites-container">
+                    <button class="lightbox-btn left" onclick="changeImage(-1)">＜</button>
+                        <svg class="heart" id="myIcon" viewBox="0 0 24 24" width="50" height="50" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    <button class="lightbox-btn right" onclick="changeImage(1)">＞</button>    
+                    </div>
+                </div>
+            </div>
+        
+            <!-- sosig's content -->
+            <div id="sosig" class="portfolio" style="display: none;">
+                <div class="title">
+                    <h1>WORKS</h1>
+                    <img src="./img/arrow.png" alt="arrow">
+                </div>
+                <button class="gallery-btn left" onclick="showPreviousGallery('sosig')">＜</button>
+                <div class="gallery" id="gallery1">
+                    <img src="./img/sosigWORK/photo1.gif" alt="作品1" onclick="openLightbox('./img/sosigWORK/photo1.gif')">
+                    <img src="./img/sosigWORK/photo2.gif" alt="作品2" onclick="openLightbox('./img/sosigWORK/photo2.gif')">
+                    <img src="./img/sosigWORK/photo3.png" alt="作品3" onclick="openLightbox('./img/sosigWORK/photo3.png')">
+                    <img src="./img/sosigWORK/photo4.jpg" alt="作品4" onclick="openLightbox('./img/sosigWORK/photo4.jpg')">
+                    <img src="./img/sosigWORK/photo5.jpg" alt="作品5" onclick="openLightbox('./img/sosigWORK/photo5.jpg')">
+                    <img src="./img/sosigWORK/photo6.png" alt="作品6" onclick="openLightbox('./img/sosigWORK/photo6.png')">
+                    <img src="./img/sosigWORK/photo7.png" alt="作品7" onclick="openLightbox('./img/sosigWORK/photo7.png')">
+                    <img src="./img/sosigWORK/photo8.png" alt="作品8" onclick="openLightbox('./img/sosigWORK/photo8.png')">
+                </div>
+        
+                <div class="gallery" id="gallery2" style="display: none;">
+                    <img src="./img/sosigWORK/photo9.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo9.png')">
+                    <img src="./img/sosigWORK/photo10.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo10.png')">
+                    <img src="./img/sosigWORK/photo11.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo11.png')">
+                    <img src="./img/sosigWORK/photo12.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo12.png')">
+                    <img src="./img/sosigWORK/photo13.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo13.png')">
+                    <img src="./img/sosigWORK/photo14.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo14.png')">
+                    <img src="./img/sosigWORK/photo15.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo15.png')">
+                    <img src="./img/sosigWORK/photo16.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo16.png')">    
+                </div>
+                <button class="gallery-btn right" onclick="showNextGallery('sosig')">＞</button>
+        
+                <div id="IE-container-sosig" class="IE" style="display: none;">
+                    <div class="intro">
+                        <img src="./img/arrow.png" alt="arrow">
+                        <h1>INTRODUCTION</h1>
+                        <p class="introP"><strong>Hi! You can call me sausage as well :D
+                        <br><br>
+                        I believe that good design is not just about creating an<br>intelligent blend of style, form and function.<br>It is also a form of storytelling, each design should have their<br>own story, or it's just a hollow object without any emotion.</strong></p>
+                    </div>
+        
+                    <div class="exp">
+                        <img src="./img/arrow.png" alt="arrow">
+                        <h1>EXPERIENCE</h1>
+                        <div class="school">
+                            <p><strong>Brand Identity(VI)</strong><br>舞愛不赦四校六社舞展 (2018)</p>
+                            <p><strong>Cover Design</strong><br>SHCH yearbook (2020)</p>
+                            <p><strong>Graphic Design Leader</strong><br>SCID109 Final Exhibition(2021)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- shan's content sosig完成後直接複製main2過來 -->
+        <div class="main2">
+            <!-- shan's content -->
+            <div id="shan" class="portfolio" style="display: none;">
+                <div class="title">
+                    <h1>WORKS</h1>
+                    <img src="./img/arrow.png" alt="arrow">
+                </div>
+                <button class="gallery-btn left" onclick="showPreviousGallery('shan')">＜</button>
+                <div class="gallery" id="gallery1-shan">
+                    <img src="./img/photo1.png" alt="作品1" onclick="openLightbox('./img/sosigWORK/photo1.gif')">
+                    <img src="./img/photo1.png" alt="作品2" onclick="openLightbox('./img/sosigWORK/photo2.gif')">
+                    <img src="./img/photo1.png" alt="作品3" onclick="openLightbox('./img/sosigWORK/photo3.png')">
+                    <img src="./img/photo1.png" alt="作品4" onclick="openLightbox('./img/sosigWORK/photo4.jpg')">
+                    <img src="./img/photo1.png" alt="作品5" onclick="openLightbox('./img/sosigWORK/photo5.jpg')">
+                    <img src="./img/photo1.png" alt="作品6" onclick="openLightbox('./img/sosigWORK/photo6.png')">
+                    <img src="./img/photo1.png" alt="作品7" onclick="openLightbox('./img/sosigWORK/photo7.png')">
+                    <img src="./img/photo1.png" alt="作品8" onclick="openLightbox('./img/sosigWORK/photo8.png')">
+                </div>
+        
+                <div class="gallery" id="gallery2-shan" style="display: none;">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo9.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo10.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo11.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo12.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo13.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo14.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo15.png')">
+                    <img src="./img/sosigpfp.png" alt="作品9" onclick="openLightbox('./img/sosigWORK/photo16.png')">    
+                </div>
+                <button class="gallery-btn right" onclick="showNextGallery('shan')">＞</button>
+        
+                <div id="IE-container-shan" class="IE" style="display: none;">
+                    <div class="intro">
+                        <img src="./img/arrow.png" alt="arrow">
+                        <h1>INTRODUCTION</h1>
+                        <p class="introP"><strong>Hi! You can call me sausage as well :D
+                        <br><br>
+                        I believe that good design is not just about creating an<br>intelligent blend of style, form and function.<br>It is also a form of storytelling, each design should have their<br>own story, or it's just a hollow object without any emotion.</strong></p>
+                    </div>
+        
+                    <div class="exp">
+                        <img src="./img/arrow.png" alt="arrow">
+                        <h1>EXPERIENCE</h1>
+                        <div class="school">
+                            <p><strong>Undergraduate</strong><br>Dept. of Interaction Design -National Taipei University of Technology</p>
+                            <p><strong>2020-2022</strong><br>Dept. of Industrial Design -Shih Chien University</p>
+                            <p><strong>2017-2020</strong><br>The Affiliated Senior High School of National Chung Hsing University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="twobtn">
+            <button class="info" type="button" onclick="window.location.href='info.html'">INFO</button>
+            <button class="contact" type="button" onclick="window.location.href='contact.html'">CONTACT</button>
+        </div>
+    </main>
+
+    <script>
+        function showDesigner(designerId) {
+        // 隱藏首頁圖片
+        const homepageImage = document.getElementById('homeImg');
+        if (homepageImage) {
+        homepageImage.style.display = 'none';
+        }
+
+        // 隱藏所有 portfolio
+        document.querySelectorAll('.portfolio').forEach(div => {
+        div.style.display = 'none';
+        });
+    
+        // 隱藏所有 IE-container
+        document.querySelectorAll('.IE').forEach(div => {
+        div.style.display = 'none';
+        });
+
+        // 顯示所選設計師的作品
+        const portfolio = document.getElementById(designerId);
+        if (portfolio) {
+        portfolio.style.display = 'block';
+        }
+
+        // 顯示該設計師的 IE-container 和 gallery
+        const ieContainerId = `IE-container-${designerId}`;
+        const ieContainer = document.getElementById(ieContainerId);
+        if (ieContainer) {
+        ieContainer.style.display = 'flex';
+        }
+
+        // 顯示對應的 gallery 區塊
+        const gallery1 = document.getElementById(`gallery1-${designerId}`);
+        const gallery2 = document.getElementById(`gallery2-${designerId}`);
+        if (gallery1) gallery1.style.display = 'grid';
+        if (gallery2) gallery2.style.display = 'none';
+        }
+
+
+         //大圖中的左右切換在裡面vvvvv
+        let currentImageIndex = 0; // 當前圖片索引
+        const images = [
+        './img/sosigWORK/photo1.gif',
+        './img/sosigWORK/photo2.gif',
+        './img/sosigWORK/photo3.png',
+        './img/sosigWORK/photo4.jpg',
+        './img/sosigWORK/photo5.jpg',
+        './img/sosigWORK/photo6.png',
+        './img/sosigWORK/photo7.png',
+        './img/sosigWORK/photo8.png',
+        // 在這裡添加其他圖片的路徑
+        ];
+
+        function openLightbox(src, captionText) {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'flex';
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('caption').textContent = captionText; // 顯示傳遞的說明文字
+        
+        currentImageIndex = images.indexOf(imageSrc);
+
+        }
+
+        function changeImage(direction) {
+        currentImageIndex += direction; // 根據方向改變索引
+        // 確保索引在有效範圍內
+        if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1; // 循環到最後一張
+        } else if (currentImageIndex >= images.length) {
+        currentImageIndex = 0; // 循環到第一張
+        }
+    
+        const lightboxImg = document.getElementById('lightboxImg');
+        lightboxImg.src = images[currentImageIndex]; // 更新圖片
+        const caption = document.getElementById('caption');
+        caption.innerHTML = "圖片說明"; // 更新說明（如果需要可以根據當前圖片更新）
+        }
+
+        // 關閉彈出視窗
+        function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+        }
+
+        function addToFavorites() {
+        // 目前這是一個空函數，將來可以添加收藏邏輯
+        console.log("收藏事件觸發");
+        }
+
+    </script>
+
+    
+
+    <footer>
+        <img class="LOGO" src="./img/LOGOb.png"/> 
+        <div class="footer-text">
+            © 2024 All rights reserved by SOSIGDesignLab / Designed by Lynn(sosig) & Chiashan
+        </div>
+        <div class="language">
+            <select name="plan">
+                <option value="eng" selected>English</option>
+                <option value="cn">繁體中文</option>
+            </select>
+        </div>
+
+        <div id="div_line"></div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
