@@ -2,25 +2,25 @@ let currentGalleryIndex = 0; // 目前顯示的畫廊索引，從 0 開始
 
 const galleries = [
     [ //sosig gallery1
-        { src: './img/sosigWORK/photo1.gif', caption: 'animated emot for Meiy_vl' },
-        { src: './img/sosigWORK/photo2.gif', caption: '' },
-        { src: './img/sosigWORK/photo3.png', caption: '' },
-        { src: './img/sosigWORK/photo4.jpg', caption: '' },
-        { src: './img/sosigWORK/photo5.jpg', caption: '' },
-        { src: './img/sosigWORK/photo6.png', caption: '' },
-        { src: './img/sosigWORK/photo7.png', caption: '' },
-        { src: './img/sosigWORK/photo8.png', caption: '' }
+        { src: './img/sosigWORK/photo1.gif', caption: 'animated emote for Meiy_vl' },
+        { src: './img/sosigWORK/photo2.gif', caption: 'Twitch animated emotes' },
+        { src: './img/sosigWORK/photo3.png', caption: 'SHCH yearbook cover design' },
+        { src: './img/sosigWORK/photo4.jpg', caption: 'photography' },
+        { src: './img/sosigWORK/photo5.jpg', caption: 'photography' },
+        { src: './img/sosigWORK/photo6.png', caption: 'Twitch Commission Price' },
+        { src: './img/sosigWORK/photo7.png', caption: 'Twitch Commission Price2' },
+        { src: './img/sosigWORK/photo8.png', caption: 'emote for YdeGaming' }
     ],
 
     [ //sosig gallery2
-        { src: './img/sosigWORK/photo9.png', caption: '' },
-        { src: './img/sosigWORK/photo10.png', caption: '' },
-        { src: './img/sosigWORK/photo11.png', caption: '' },
-        { src: './img/sosigWORK/photo12.png', caption: '' },
-        { src: './img/sosigWORK/photo13.png', caption: '' },
-        { src: './img/sosigWORK/photo14.png', caption: '' },
-        { src: './img/sosigWORK/photo15.png', caption: '' },
-        { src: './img/sosigWORK/photo16.png', caption: '' }
+        { src: './img/sosigWORK/photo9.png', caption: 'McDonalds UI redesign' },
+        { src: './img/sosigWORK/photo10.png', caption: 'McDonalds UI redesign2' },
+        { src: './img/sosigWORK/photo11.png', caption: 'DanceWithLuv VI design' },
+        { src: './img/sosigWORK/photo12.png', caption: 'DanceWithLuv VI design2' },
+        { src: './img/sosigWORK/photo13.png', caption: 'LINE STICKERS' },
+        { src: './img/sosigWORK/photo14.png', caption: 'Discord banner/icon design' },
+        { src: './img/sosigWORK/photo15.png', caption: 'Stuffed doll design' },
+        { src: './img/sosigWORK/photo16.png', caption: 'product design' }
     ],
 
     [ // shan gallery1
