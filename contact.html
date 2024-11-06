@@ -121,20 +121,18 @@
             card.classList.add('expanded'); // 添加放大狀態
             overlay.style.display = 'block'; // 顯示遮罩
 
-            // 隱藏 button-group
+            // 顯示 button-group
             const buttonGroup = card.querySelector('.button-group');
             if (buttonGroup) {
-                buttonGroup.style.display = 'none'; // 隱藏按鈕組
+                buttonGroup.style.display = 'block'; // 顯示按鈕組
             }
 
             // 切換圖片
             const cardInner = card.querySelector('.card-inner');
             if (isFlipped) {
                 cardInner.style.transform = "rotateY(0deg)"; // 回到原來的圖片
-                buttonGroup.style.display = 'block';
             } else {
                 cardInner.style.transform = "rotateY(180deg)"; // 切換到另一張圖片
-                buttonGroup.style.display = 'block';
             }
             isFlipped = !isFlipped; // 切換狀態
         });
@@ -148,8 +146,14 @@
                 card.classList.remove('expanded'); // 縮小卡片
                 const cardInner = card.querySelector('.card-inner');
                 cardInner.style.transform = "rotateY(0deg)"; // 重置圖片
-                buttonGroup.style.display = 'block';
             }
+
+            // 顯示 button-group
+            const buttonGroup = card.querySelector('.button-group');
+                if (buttonGroup) {
+                    buttonGroup.style.display = 'block'; // 顯示按鈕組
+                }
+
         });
     });
 });
