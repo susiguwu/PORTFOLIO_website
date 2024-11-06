@@ -173,45 +173,67 @@
 
     <script>
         function showDesigner(designerId) {
-        
-     
-        
-        // 隱藏首頁圖片
-        const homepageImage = document.getElementById('homeImg');
-        if (homepageImage) {
+    // 隱藏首頁圖片
+    const homepageImage = document.getElementById('homeImg');
+    if (homepageImage) {
         homepageImage.style.display = 'none';
-        }
+    }
 
-        // 隱藏所有 portfolio
-        document.querySelectorAll('.portfolio').forEach(div => {
+    // 隱藏所有 portfolio
+    document.querySelectorAll('.portfolio').forEach(div => {
         div.style.display = 'none';
-        });
-    
-        // 隱藏所有 IE-container
-        document.querySelectorAll('.IE').forEach(div => {
-        div.style.display = 'none';
-        });
+    });
 
-        // 顯示所選設計師的作品
-        const portfolio = document.getElementById(designerId);
-        if (portfolio) {
+    // 隱藏所有 IE-container
+    document.querySelectorAll('.IE').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    // 顯示所選設計師的作品
+    const portfolio = document.getElementById(designerId);
+    if (portfolio) {
         portfolio.style.display = 'block';
-        }
+    }
 
-        // 顯示該設計師的 IE-container 和 gallery
-        const ieContainerId = `IE-container-${designerId}`;
-        const ieContainer = document.getElementById(ieContainerId);
-        if (ieContainer) {
+    // 顯示該設計師的 IE-container 和 gallery
+    const ieContainerId = `IE-container-${designerId}`;
+    const ieContainer = document.getElementById(ieContainerId);
+    if (ieContainer) {
         ieContainer.style.display = 'flex';
-        }
+    }
 
-        // 顯示對應的 gallery 區塊
-        const gallery1 = document.getElementById(`gallery1-${designerId}`);
-        const gallery2 = document.getElementById(`gallery2-${designerId}`);
-        if (gallery1) gallery1.style.display = 'grid';
-        if (gallery2) gallery2.style.display = 'none';
-        }
+    // 顯示對應的 gallery 區塊
+    const gallery1 = document.getElementById(`gallery1-${designerId}`);
+    const gallery2 = document.getElementById(`gallery2-${designerId}`);
+    if (gallery1) gallery1.style.display = 'grid';
+    if (gallery2) gallery2.style.display = 'none';
 
+    // 先移除所有圖片的 active 類別，並將所有圖片設為灰階
+    document.querySelectorAll('img.d1, img.d2').forEach(image => {
+    image.style.filter = 'grayscale(100%)';  // 設為灰階
+    image.classList.remove('active');       // 移除 active 類別
+    });
+
+    // 根據 designerId 選擇對應的圖片變為彩色，並加入 active 類別
+    // 假設你使用 id="d1" 或 id="d2" 來標識這些圖片，這裡根據 designerId 來選擇
+    const selectedImage = document.querySelector(`img[class="${designerId === 'sosig' ? 'd1' : 'd2'}"]`);
+    if (selectedImage) {
+    selectedImage.style.filter = 'none';  // 取消灰階，顯示彩色
+    selectedImage.classList.add('active');  // 添加 active 類別
+    }
+
+
+
+}
+
+
+
+
+
+
+
+        
+//------------------------------------------------------------
                 
 
          //大圖中的左右切換在裡面vvvvv
@@ -260,7 +282,7 @@
         document.getElementById('lightboxImg').src = src;
         document.getElementById('caption').textContent = captionText; // 顯示傳遞的說明文字
         
-        currentImageIndex = images.indexOf(imageSrc);
+        currentImageIndex = images.indexOf(src);
 
         }
 
@@ -284,10 +306,28 @@
         document.getElementById('lightbox').style.display = 'none';
         }
 
+        // 等待頁面加載完成後執行
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+        // **收藏功能***********************獲取 heart 元素（SVG）
+        const heart = document.getElementById('myIcon');
+
+        // 為 heart 元素綁定點擊事件
+        heart.addEventListener('click', addToFavorites);
+        });
+
+        // addToFavorites 函數
         function addToFavorites() {
-        // 目前這是一個空函數，將來可以添加收藏邏輯
-        console.log("收藏事件觸發");
-        }
+        // 獲取 heart 元素（SVG）
+        const heart = document.getElementById('myIcon');
+    
+        // 切換 clicked 類別來控制顏色
+        heart.classList.toggle('clicked');
+
+        //以下添加其他
+
+    }
+
 
     </script>
 

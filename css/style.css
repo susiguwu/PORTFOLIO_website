@@ -298,6 +298,10 @@ h1{
     color: #0000FA;
 }
 
+.heart.clicked {
+    fill: #0000FA !important; /* 持續保持顏色 */
+}
+
 /*-----------vvvINTRO&EXPvvv------------*/
 .IE{
     width: 100%;
@@ -382,9 +386,20 @@ h1{
     filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA);
 }
 
+.container img:not(.selected):hover {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA); /* hover 時顯示顏色 */
+    transform: scale(1.05); /* 放大效果 */
+}
+
+/* 讓選擇的圖片不受灰階影響 */
+.container img.selected {
+    filter: grayscale(0%);
+}
+
 /* 選中的圖片會保持無灰階的樣式 */
 .d1.active, .d2.active {
-    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA);
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA) !important;
+    
 }
 
 .container {
@@ -397,7 +412,7 @@ h1{
 
 .container img {
     border-radius: 10px;
-    transition: filter 0.3s ease; /* 增加過渡效果 */
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 加入過渡效果 */
 }
 
 
