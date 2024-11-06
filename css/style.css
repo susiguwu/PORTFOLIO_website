@@ -116,9 +116,10 @@ h1{
     width: 800px;
     height: 100%;
     position: relative; 
-    left: -300px; 
-    margin-top: -20px;
+    left: -400px; 
+    margin-top: -300px;
     margin-bottom: 50px;
+    z-index: 1;
 }
 
 
@@ -373,6 +374,17 @@ h1{
     height: auto; /* 自動調整高度以保持比例 */
     display: flex;
     justify-content: center;
+    filter: grayscale(100%) ;
+}
+
+/* hover 效果在所有圖片上都會生效 */
+.container img:hover {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA);
+}
+
+/* 選中的圖片會保持無灰階的樣式 */
+.d1.active, .d2.active {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA);
 }
 
 .container {
@@ -388,10 +400,6 @@ h1{
     transition: filter 0.3s ease; /* 增加過渡效果 */
 }
 
-/* 當鼠標懸停在圖片上時，變成灰色 */
-.container img:hover {
-    filter: grayscale(100%) drop-shadow(5px 5px 0px #949494);
-}
 
 .choosedesigner {
     width: auto; /* 設為自動，根據內容調整 */
@@ -407,6 +415,7 @@ h1{
     text-align: center; /* 文字置中 */
     margin-right: 200px;
     position: relative;
+    z-index: 10;
 }
 
 
