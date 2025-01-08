@@ -91,11 +91,19 @@
         height: 45px;
         border-radius: 3px;
         color: #0011ff;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 900;
         align-items: center;
         text-align: center;
         line-height: 1;
+    }
+    
+    .sosig_intro, .shan_intro{
+        scale: 80%;
+    }
+
+    .introP{
+        scale: 80%;
     }
 
 }

@@ -109,4 +109,39 @@
 
 }
 
+@media screen and (max-width: 375px) {
+    .hamburger-menu{
+        margin-right: 50px;
+    }
 
+    header .LOGO{
+        display: block;
+        margin-right: auto;
+        width: auto;
+        height: 60px;
+        margin-left: -20px;
+    }
+    
+    .choosedesigner{
+        margin-right: 50px;
+    }
+
+    .CHOOSEarrow{
+        margin-left: -200px;
+    }
+
+    /*CHOOSE D 文字*/
+    .choosedesigner h1{
+        display: none;
+    }
+
+    /*相簿每行2個*/
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 每行 4 列 */
+    }
+
+    .title{
+        margin-left: -50px;
+        margin-bottom: -10px;
+    }
+}
