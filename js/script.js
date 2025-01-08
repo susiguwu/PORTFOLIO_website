@@ -41,15 +41,15 @@ const translations = {
 
  /*-------^^^切換語言^^^--------*/  
 
-let currentGalleryIndex = 0; // 目前顯示的畫廊索引，從 0 開始
+let currentGalleryIndex = -1; // 目前顯示的畫廊索引，從 0 開始
 
 const galleries = [
     [ //sosig gallery1
-        { src: './img/sosigWORK/photo1.gif', caption: 'animated emote for Meiy_vl' },
-        { src: './img/sosigWORK/photo2.gif', caption: 'Twitch animated emotes' },
-        { src: './img/sosigWORK/photo3.png', caption: 'SHCH yearbook cover design' },
-        { src: './img/sosigWORK/photo4.jpg', caption: 'photography' },
-        { src: './img/sosigWORK/photo5.jpg', caption: 'photography' },
+        { src: './img/sosigWORK/photo1.gif', caption: 'Minimalist Elegance: Focus on clean lines, simple colors, and intuitive layouts to create a sleek and timeless design that promotes functionality with style.' },
+        { src: './img/sosigWORK/photo2.png', caption: 'Interactive Storytelling: Engage users through dynamic visuals and immersive content that unfolds as they navigate, creating a narrative-driven experience that is both entertaining and informative.' },
+        { src: './img/sosigWORK/photo3.png', caption: 'Bold Typography: Use oversized, eye-catching fonts to draw attention, combined with contrasting colors and creative spacing to make the text the focal point of the design.' },
+        { src: './img/sosigWORK/photo4.jpg', caption: 'Nature-Inspired Design: Incorporate organic shapes, earthy tones, and natural textures to create a calming, grounded design that evokes a sense of connection with the environment' },
+        { src: './img/sosigWORK/photo5.jpg', caption: 'Futuristic Innovation: Embrace cutting-edge design trends such as 3D elements, sleek interfaces, and vibrant gradients to craft a forward-thinking, tech-savvy user experience.' },
         { src: './img/sosigWORK/photo6.png', caption: 'Twitch Commission Price' },
         { src: './img/sosigWORK/photo7.png', caption: 'Twitch Commission Price2' },
         { src: './img/sosigWORK/photo8.png', caption: 'emote for YdeGaming' }

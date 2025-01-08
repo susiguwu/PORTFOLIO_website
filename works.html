@@ -90,7 +90,7 @@
                         <img src="./img/sosigWORK/photo1.gif" alt="作品1" onclick="openLightbox('./img/sosigWORK/photo1.gif')">
                     </div>
                     <div data-text="作品title">
-                        <img src="./img/sosigWORK/photo2.gif" alt="作品2" onclick="openLightbox('./img/sosigWORK/photo2.gif')">
+                        <img src="./img/sosigWORK/photo2.png" alt="作品2" onclick="openLightbox('./img/sosigWORK/photo2.png')">
                     </div>
                     <div data-text="作品title">
                         <img src="./img/sosigWORK/photo3.png" alt="作品3" onclick="openLightbox('./img/sosigWORK/photo3.png')">
@@ -255,6 +255,7 @@ function showDesigner(designerId) {
 }
 
     function changeImage(direction) {
+        if (currentImageIndex === -1) return;
         currentImageIndex += direction; // 根據方向改變索引
         // 確保索引在有效範圍內
         if (currentImageIndex < 0) {
