@@ -1,0 +1,563 @@
+*{
+    font-family: 'Lexend', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e8e7e7;
+    padding-top: 60px;
+    /*overflow-x: hidden;*/
+    margin: 0; /* 去除預設邊距 */
+    width: 100%; /* 設定為100%寬度 */
+}
+
+header .LOGO{
+    display: block;
+    margin-right: auto;
+    width: auto;
+    height: 60px;
+    margin-left: 10px;
+  }
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 1000; /* 保持header在最上方 */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* 確保header沒有額外的上下偏移 */
+}
+
+nav{
+    display: flex;
+}
+
+.nav_b{
+    display: flex;
+    margin-right: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;  /*靠右的魔法*/
+}
+
+.btns{
+    display: flex; /* 將 .btns 設置為 flex 以便於排版 */
+    align-items: center; /* 確保按鈕垂直居中 */
+    margin-left: auto; /*LOGO跟BTN的距離*/
+}
+
+.btns button {
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #333;
+    padding: 5px 20px; /*按鈕的長寬*/
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px; /* 這裡調整按鈕之間的間距 */
+    margin-top: 1px;
+}
+
+.btns button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main{
+    display: flex; /* 使用 flexbox */
+    flex-direction: column; /* 垂直排版 */
+    align-items: center; /* 水平置中內容 */
+    justify-content: center; /* 垂直置中內容 */
+    width: 100%;
+    margin: 0 auto; /* 水平居中 */
+    
+}
+
+.main2{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
+    justify-content: center; /* 垂直置中 */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* 可根據需要添加內邊距 */
+}
+
+
+h1{
+    font-family: 'NotoSans', sans-serif;
+    width: 528px;
+    height: 45px;
+    border-radius: 3px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 900;
+    padding-left:30px;
+    line-height: 45px;
+}
+
+.homeimg {
+    display: flex;
+    justify-content: flex-start;
+    width: 800px;
+    height: 100%;
+    position: relative; 
+    left: -400px; 
+    margin-top: -300px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+
+
+/*------vvvGALLERY FUNCTION LIGHTBOXvvv--------*/
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;
+}
+
+/* 大圖樣式 */
+.lightbox-content img {
+    max-width: 80%; /* 限制圖片的最大寬度 */
+    max-height: 80vh; /* 限制圖片的最大高度 */
+    margin-bottom: 10px; /* 與說明文字的間距 */
+    border-radius: 20px;
+}
+
+/* 說明文字樣式 */
+.caption {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 關閉按鈕樣式 */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*-------------vvvGALLERYvvv--------------*/
+
+.title h1{
+    color: #0000FA;
+    font-size: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -40px;
+    margin-left: 150px;
+}
+
+.title img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -10px;
+    margin-left: 370px;
+}
+
+.portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 每行 4 列 */
+    grid-gap: 10px; /* 圖片之間的間距 */
+    width: 80%; /* 可以根據需要調整 */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    scale: 75%;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1; /* 保持正方形 */
+    object-fit: cover; /* 圖片自動裁剪以填滿容器 */
+    border-radius: 20px; /* 可以選擇是否有圓角 */
+    object-fit: cover; /* 裁剪圖片以填滿格子 */
+}
+
+.gallery img:hover{
+    transform: scale(1.1); /* 放大比例，可以調整 */
+    cursor: pointer;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 保持內容置中 */
+    width: 100%; /* 讓容器佔滿父元素寬度 */
+    max-width: 800px; /* 可視需求調整 */
+    margin: auto; /* 居中容器 */
+}
+
+.gallery-btn {
+    width: 50px; /* 確保寬度 */
+    height: 50px; /* 添加高度，保持圓形 */
+    background-color: #0000FA; 
+    border: none;
+    border-radius: 50%; /* 設置為 50% 以達到圓形效果 */
+    color: #ffffff;
+    padding: 0; /* 不需要內邊距 */
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    top: 100%; /* 調整位置以將按鈕往下移 */
+    transform: translate(-50%, -50%); /* 中心對齊 */
+}
+
+.gallery-btn.left {
+    left: 150px; /* 調整位置以確保按鈕可見 */
+}
+
+.gallery-btn.right {
+    right: 100px; /* 調整位置以確保按鈕可見 */
+}
+
+.gallery-btn:hover{
+    background-color: #ffffff;
+    color: #0000FA;
+}
+
+/*---------vvv大圖中的左右BTNvvv-----------*/
+.lightbox-btn {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255); 
+    font-size: 35px; 
+    font-weight: 800;
+    cursor: pointer; 
+    display: flex;
+}
+
+.lightbox-btn:hover {
+    color: #0000FA;
+}
+
+/*-----------vvvFAV BTNvvv------------*/
+.favorites-container {
+    display: flex; /* 將子元素排列為橫排 */
+    align-items: center; /* 垂直置中 */
+    gap: 10px; /* 控制按鈕之間的間距 */
+}
+
+.heart{
+    color: #ffffff;
+    cursor: pointer; /* 讓滑鼠變成手型 */
+    width: 50px; /* 調整大小 */
+    height: 50px;
+}
+
+.heart:hover{
+    color: #0000FA;
+}
+
+.heart.clicked {
+    fill: #0000FA !important; /* 持續保持顏色 */
+}
+
+/*-----------vvvINTRO&EXPvvv------------*/
+.IE{
+    width: 100%;
+    max-width: 800px; /* 根據需要調整 */
+    display: flex;
+    gap: 100px;
+    margin: 0 auto; /* 保證在父容器內水平置中 */
+    justify-content: center; /* 讓內部元素水平置中 */
+    align-items: center; /* 讓內部元素垂直置中 */
+    scale: 85%;
+    margin-bottom: -50px;
+    margin-top: -30px;
+}
+
+
+.intro h1{
+    color: #0000FA;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.intro img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -40px;
+    margin-left: 390px;
+    scale: 95%;
+}
+
+.exp h1{
+    color: #0000FA;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.exp img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: -40px;
+    margin-left: 330px;
+    scale: 95%;
+}
+
+.school, p.introP{
+    font-family: "Comfortaa", sans-serif;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid #0000FA;
+    color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    line-height: 30px;
+    width: 650px;
+    border-radius: 20px;
+    scale: 90%;
+}
+
+
+
+/*---------------vvvCHOOSE DESIGNERvvv-------------*/
+
+
+.d1, .d2 {
+    width: 150px; /* 調整圖片寬度 */
+    height: auto; /* 自動調整高度以保持比例 */
+    display: flex;
+    justify-content: center;
+    filter: grayscale(100%) ;
+}
+
+/* hover 效果在所有圖片上都會生效 */
+.container img:hover {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA);
+}
+
+.container img:not(.selected):hover {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA); /* hover 時顯示顏色 */
+    transform: scale(1.05); /* 放大效果 */
+}
+
+/* 讓選擇的圖片不受灰階影響 */
+.container img.selected {
+    filter: grayscale(0%);
+}
+
+/* 選中的圖片會保持無灰階的樣式 */
+.d1.active, .d2.active {
+    filter: grayscale(0%) drop-shadow(5px 5px 0px #0000FA) !important;
+    
+}
+
+.container {
+    display: flex;
+    gap: 20px; /* 調整圖片之間的間距 */
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.container img {
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 加入過渡效果 */
+}
+
+
+.choosedesigner {
+    width: auto; /* 設為自動，根據內容調整 */
+    max-width: 90%; /* 設定最大寬度為90% */
+    margin-left: auto;
+    margin-right: 0;
+   
+    
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    height: 200px; /* 讓容器的高度佔滿整個視窗高度 */
+    text-align: center; /* 文字置中 */
+    margin-right: 200px;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.choosedesigner h1 {
+    color: #0000FA;
+    display: block;
+    text-align: left; /* 將文字靠左 */
+    font-size: 3em; /* 調整字體大小 */
+    line-height: 1.2; /* 控制行距 */
+    margin-right: -150px;
+    margin-bottom: 50px;
+}
+
+.designer-names {
+    display: flex; /* 使用flexbox */
+    flex-direction: row; 
+    margin-top: 10px; /* 確保它們與圖片有間距 */
+    justify-content: flex-end;
+    margin-right: -10px;
+    gap: 80px;
+}
+.choosedesigner p{
+    margin: 0 20px; /* 為每個名字增加左右間距 */
+    font-family: 'Lexend', sans-serif;
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.fuckyou{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.CHOOSEarrow{
+    position: absolute; 
+    top: 125px; 
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中調整 */
+    width: 35px; 
+    height: auto; 
+    margin-left: -15px;
+}
+
+/*--------------vvvTWOBTNvvv-------------*/
+
+.twobtn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    scale: 120%;
+    margin-bottom: 40px;
+}
+
+.twobtn button {
+    scale: 120%;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    color: #858585;
+    padding: 5px 20px; /*按鈕的長寬*/
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px; /* 這裡調整按鈕之間的間距 */
+    margin-top: 1px; 
+}
+
+.twobtn button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/*以下是FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    font-family: 'Noto Sans';
+    font-weight: 400;
+}
+
+footer .LOGO {
+    align-self: flex-start; 
+    width: 200px;
+    height: 100%;
+}
+
+footer .footer-text {
+    color: #333;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#div_line {
+    width: 100%;
+    height: 2px;
+    background-color: #555;
+    margin-top: 20px;
+}
+
+footer .language {
+    align-self: flex-start; 
+}
+
+footer .language select {
+    background-color: transparent; 
+    border: 1px solid #000000;
+    padding: 5px 8px;
+    border-radius: 50px;
+    font-family: "Noto Sans", sans-serif;
+    color: #333;
+    font-weight: 700;
+    margin-left: 20px; 
+}
+
+footer .language select:hover {
+    background-color: #e0e0e0;
+}

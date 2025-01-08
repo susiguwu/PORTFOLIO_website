@@ -77,6 +77,26 @@ nav{
 }
 /*------------------header------------------------*/
 
+/*-------------語言選單--------------*/
+.language {
+    display: inline-block; /* 確保容器與內容保持一致 */
+}
+
+.language select {
+    border: 1px solid #333; /* 外框樣式 */
+    border-radius: 50px; 
+    padding: 5px 10px; /* 內邊距調整 */
+    font-family: "Noto Sans", sans-serif; 
+    font-weight: 700; 
+    color: #333; /* 文字顏色 */
+    background-color: #fff; /* 背景顏色 */
+    cursor: pointer; /* 滑鼠指標變成手型 */
+    outline: none; /* 移除點擊時的外框 */
+    margin-left: 20px;
+}
+
+/*------------------以上不要動-------------------*/
+
 .container {
     position: relative;
     max-width: 1200px;
@@ -167,9 +187,6 @@ nav{
     margin-bottom: 10px; 
 }
 
-
-
-
 .button-group {
     display: flex;           /* 使用 Flexbox 排列按鈕和文字 */
     align-items: center;     /* 垂直對齊按鈕和文字 */
@@ -217,6 +234,7 @@ nav{
     scale: 120%;
 }
 
+/*------------------以上不要動-------------------*/
 
 /*-------------------footer--------------------------*/
 footer {
@@ -224,11 +242,12 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px;
-    background-color: #DAD8D8;
+    background-color: #ffffff;
     color: #000000;
     font-size: 14px;
     font-family: 'Noto Sans';
     font-weight: 400;
+    margin-top: 20px;
 }
 
 footer .LOGO {
@@ -253,22 +272,4 @@ footer .footer-text {
     margin-top: 20px;
 }
 
-footer .language {
-    align-self: flex-start; 
-}
 
-footer .language select {
-    background-color: transparent; 
-    border: 1px solid #000000;
-    padding: 5px 8px;
-    border-radius: 50px;
-    font-family: "Noto Sans", sans-serif;
-    color: #333;
-    font-weight: 700;
-    margin-left: 20px; 
-}
-
-footer .language select:hover {
-    background-color: #e0e0e0;
-}
-/*-------------------footer--------------------------*

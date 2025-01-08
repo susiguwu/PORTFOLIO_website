@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/contact_css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <header>
-        <nav class="nav_b">
-            <a href="index.html">
-                <img class="LOGO" src="./img/LOGO.png" alt="Logo">
-            </a>
-            <div class="btns">
-                <button class="works" type="button" onclick="window.location.href='works.html'">Works</button>
-                <button class="archive" type="button" onclick="window.location.href='archive.html'">Archive</button>
-                <button class="info" type="button" onclick="window.location.href='info.html'">Info</button>
-                <button class="schedule" type="button" onclick="window.location.href='schedule.html'">Schedule</button>
-                <button class="contact" type="button" onclick="window.location.href='contact.html'">Contact</button>
-            </div>
-        </nav>
-    </header>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/contact_css.css">
+        <link rel="stylesheet" href="./css/RWDhome.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <header>
+    
+            <nav class="nav_b">
+                <a href="index.html">
+                    <img class="LOGO" src="./img/LOGO.png" alt="Logo">
+                </a>
+                <div class="btns">
+                    <!-- 隱藏的 checkbox -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+                    <!-- 漢堡選單按鈕，點擊觸發 checkbox -->
+                    <label for="menu-toggle" class="hamburger-menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </label>
+    
+                    <div class="btns-items">
+                    <button class="home" type="button" onclick="window.location.href='index.html'">Home</button>
+                    <button class="works" type="button" onclick="window.location.href='works.html'">Works</button>
+                    <button class="contact" type="button" onclick="window.location.href='contact.html'">Contact</button>
+                    <div class="language">
+                        <select id="languageSelector" name="plan">
+                            <option value="eng" selected>English</option>
+                            <option value="zh">繁體中文</option>
+                        </select>
+                    </div>
+                    </div>
+                    
+                </div>
+                
+            </nav>
+        </header>
+        <script src="js/script.js"></script>
+    </head>
 
 
 
@@ -167,12 +188,6 @@
     <img class="LOGO" src="./img/LOGOb.png"/> 
     <div class="footer-text">
         © 2024 All rights reserved by SOSIGDesignLab / Designed by Lynn(sosig) & Chiashan
-    </div>
-    <div class="language">
-        <select name="plan">
-            <option value="eng" selected>English</option>
-            <option value="cn">繁體中文</option>
-        </select>
     </div>
 
     <div id="div_line"></div>
