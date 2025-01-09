@@ -1,7 +1,77 @@
 /* ---------------- 響應式設計 ---------------- */
 
+.menu-toggle {
+    display: none;
+}
+
+/* 漢堡選單 */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 100%;
+    height: 4px;
+    background-color: #0000FA;
+    border-radius: 5px;
+}
+
 /* 手機尺寸（小於 768px） */
 @media (max-width: 768px) {
+    .btns-items {
+        display: none; /* 隱藏選單 */
+        flex-direction: column;
+        gap: 20px; /* 選單間隙 */
+        align-items: center;
+        background-color: rgb(250, 250, 250);
+        width: 30%; /* 確保選單寬度占滿整個螢幕 */
+        padding-top: 10px; /* 控制上方內邊距 */
+        position: absolute; /* 讓選單浮動 */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* 確保選單在最上層 */
+        transition: .5s;
+        margin-top: 60px;
+        margin-left: 325px;
+    }
+
+    .btns button {
+        background-color: transparent;
+        border: none; /* 取消邊框 */
+        border-radius: 0; /* 取消圓角 */
+        color: #333;
+        padding: 0px 20px; /* 按鈕的長寬 */
+        font-family: "Noto Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .hamburger-menu {
+        display: flex; /* 只有在小螢幕下顯示 */
+    }
+
+    /* 當 checkbox 被勾選時，顯示選單 */
+    .menu-toggle:checked + .hamburger-menu + .btns-items {
+        display: flex;
+    }
+
+    /*其他要調整的東西*/
+    header .LOGO{
+        display: block;
+        margin-right: auto;
+        width: auto;
+        height: 60px;
+        margin-left: -20px;
+    }
     body {
         padding-top: 10px;
     }

@@ -75,6 +75,10 @@ nav{
 .btns button:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.menu-toggle {
+    display: none;
+}
 /*------------------header------------------------*/
 
 /*-------------語言選單--------------*/
