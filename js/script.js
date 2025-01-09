@@ -140,3 +140,19 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
     const btnsItems = document.querySelector('.btns-items');
     btnsItems.classList.toggle('active'); // 切換active類別來顯示/隱藏選單
 });
+
+
+//contact
+
+document.getElementById("changeContentButton").addEventListener("click", function () {
+    // 修改個人圖片
+    const profileImage = document.querySelector(".profile-picture");
+    profileImage.src = "./img/new_image.jpg"; // 替換為新圖片的路徑
+
+    // 修改文字（例如名字或其他資訊）
+    const nameElement = document.querySelector(".profile h2");
+    nameElement.textContent = "Updated Lynn Lin"; // 替換為新名字
+
+    // 修改按鈕文字
+    this.textContent = "內容已更新"; // 更改按鈕上的文字
+});

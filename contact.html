@@ -50,140 +50,190 @@
 
 
 <body>
-    <div class="container">
-                <div class="title">
-                <h1>Cards</h1>
-                <img class="arrow" src="./img/arrow.png" alt="arroww">
-                </div>
-    <div class="designer_card">
-        <div class="card1">
-            <div class="cards" onclick="expandCard(this)">
-                <div class="card-inner">
-                    <img src="./img/card/sosigcard-1.png" alt="sosig" class="card front">
-                    <img src="./img/card/sosigcard-2.png" alt="sosig back" class="card-back">
-                </div>
-                <div class="info-group"> 
-                    <p class="name">Lynn</p>
-                    <div class="button-group">
-                      <a href="https://www.instagram.com/sosigdsn/" target="_blank">
-                          <button>
-                            <!--IG-->
-                            <?xml version="1.0" ?><svg class="ig" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                          </button>
-                      </a>
-                      
-                          <button><!--GMAIL-->
-                            <?xml version="1.0" ?><svg class="gm" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                          </button>
-            
-                      <a href="https://trello.com/b/U8KXll7k" target="_blank">
-                          <button><!--WEB-->
-                            <?xml version="1.0" ?><svg class="wb" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                          </button>
-                      </a>
-    
+    <div class="content-box">
+        <!-- Profile -->
+        <section class="profile">
+            <div class="profile-card">
+                <img src="./img/lynnlin.jpg" alt="Lynn Lin Picture" class="profile-picture">
+                <h2>Lynn Lin</h2>
+                <hr class="divider">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="./img/location.png" alt="Location Icon" class="icon">
+                        <span>Taichung, Taiwan</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="./img/gmail.png" alt="Email Icon" class="icon">
+                        <span>sosigdsn@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="./img/phone.png" alt="Phone Icon" class="icon">
+                        <span>+886 0983 080 321</span>
                     </div>
                 </div>
-                
-                <div class="cards expanded" style="display: none;">Expanded Card 1 Content</div> <!-- 擴展卡片 -->
-                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sosigdsn/" target="_blank">
+                        <button>
+                            <img src="./img/ig.svg" alt="Icon 1">
+                        </button>
+                    </a>
+                    <a href="https://trello.com/b/U8KXll7k" target="_blank">
+                        <button>
+                            <img src="./img/web.svg" alt="Icon 2">
+                        </button>
+                    </a>
+                </div>
             </div>
-            
+        </section>
+
+        <!-- Education -->
+        <section class="education">
+            <h3 class="section-title">
+                EDUCATION
+                <img src="./img/arrow.png" alt="Arrow Icon" class="arrow-icon">
+            </h3>
+            <div class="education-item">
+                <div class="year">2017</div>
+                <div class="detail">The Affiliated Senior High School of National Chung Hsing University</div>
+            </div>
+            <div class="education-item">
+                <div class="year">2020</div>
+                <div class="detail">Dept of Industrial Design - USC</div>
+            </div>
+            <div class="education-item">
+                <div class="year">2022</div>
+                <div class="detail">Dept of Interaction Design - NTUT</div>
+            </div>
+            <div class="education-item">
+                <div class="year">NOW</div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <div class="right-column">
+            <section class="experience">
+                <h3 class="section-title">
+                    EXPERIENCE
+                    <img src="./img/arrow.png" alt="Arrow Icon" class="arrow-icon">
+                </h3>
+                <div class="experience-item">
+                    <div class="year">2018</div>
+                    <div class="detail">Dance Showcase Merchandise Design</div>
+                </div>
+                <div class="experience-item">
+                    <div class="year">2020</div>
+                    <div class="detail">SHCH Yearbook Cover Design</div>
+                </div>
+                <div class="experience-item">
+                    <div class="year">2021</div>
+                    <div class="detail">Final Exhibition Graphic Design</div>
+                </div>
+                <div class="experience-item">
+                    <div class="year">2023</div>
+                    <div class="detail">Creative Branding Project</div>
+                </div>
+            </section>
+
+            <section class="skills-section">
+                <div class="skills-button">SKILLS
+                    <img src="./img/skill_arrow.png" alt="Arrow" class="arrow-icon">
+                </div>
+            </section>
         </div>
 
-        <div class="card1">
-            <div class="cards" onclick="expandCard(this)">
-                <div class="card-inner">
-                    <img src="./img/card/3card-1.png" alt="shan" class="card front">
-                    <img src="./img/card/3card-2.png" alt="shan back" class="card-back">
-                </div>
-                <div class="info-group"> 
-                    <p class="name">Chia Shan</p>
-                    <div class="button-group">
-                        <a href="https://www.instagram.com/sosigdsn/" target="_blank">
-                            <button>
-                                <!--IG-->
-                                <?xml version="1.0" ?><svg class="ig" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                            </button>
-                        </a>
-                          <button>
-                            <?xml version="1.0" ?><svg class="gm" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                          </button>
-                          <button>
-                            <?xml version="1.0" ?><svg class="wb"  fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                          </button>
-                    </div>
-                </div>
-                
-                <div class="cards expanded" style="display: none;">Expanded Card 2 Content</div> <!-- 擴展卡片 -->
-                
-            </div>
-        </div> 
-    </div>   
+        <!-- Skills List -->
+        <section class="skills-list">
+            <div class="skill-item">Graphic Design</div>
+            <div class="skill-item">2D Animation</div>
+            <div class="skill-item">Illustrate Drawing</div>
+            <div class="skill-item">3D Modeling</div>
+            <div class="skill-item">Photography</div>
+            <div class="skill-item">Film Editing</div>
+        </section>
     </div>
+
+    <button id="changeContentButton" class="change-button" onclick="toggleDesigner()">Change Designer</button>
+
 
 
 <!-- JavaScript  -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.cards');
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    document.body.appendChild(overlay);
+    let isLynn = true; // 用於判斷當前顯示的是哪個設計師
 
-    cards.forEach(card => {
-        let isFlipped = false; // 標記卡片是否切換圖片
+    function toggleDesigner() {
+        const nameElement = document.querySelector('.profile h2');
+        const profilePicture = document.querySelector('.profile-picture');
+        const contactItems = document.querySelectorAll('.contact-item span');
+        const educationItems = document.querySelectorAll('.education-item');
+        const experienceItems = document.querySelectorAll('.experience-item');
+        const socialLinks = document.querySelectorAll('.social-icons a');
 
-        card.addEventListener('click', (event) => {
-            // 檢查點擊的元素是否在 `.button-group` 內，若是則停止後續操作
-            if (event.target.closest('.button-group')) return;
+        if (isLynn) {
+            // 切換到 Chiashan
+            nameElement.textContent = 'Chiashan';
+            profilePicture.src = './img/chiashan.jpg';
+            profilePicture.alt = 'Chiashan Picture';
+            contactItems[0].textContent = 'Taipei, Taiwan';
+            contactItems[1].textContent = 'chiashannn@gmail.com';
+            contactItems[2].textContent = '+886 0967 278 729';
 
-            // 防止事件冒泡，避免點擊圖片時直接觸發遮罩的點擊事件
-            event.stopPropagation();
+            // 更新教育背景
+            educationItems[0].querySelector('.year').textContent = '2015';
+            educationItems[0].querySelector('.detail').textContent = 'Department of Graphic Arts Communication - TCIVS';
+            educationItems[1].querySelector('.year').textContent = '2018';
+            educationItems[1].querySelector('.detail').textContent = 'Dept of Interaction Design - NTUT';
+            educationItems[2].querySelector('.year').textContent = '2021';
+            educationItems[2].querySelector('.detail').textContent = 'Dept of Interaction Design - NTUT';
+            educationItems[3].querySelector('.year').textContent = 'NOW';
 
-            // 放大卡片並顯示遮罩
-            card.classList.add('expanded'); // 添加放大狀態
-            overlay.style.display = 'block'; // 顯示遮罩
+            // 更新工作經歷
+            experienceItems[0].querySelector('.year').textContent = '2017';
+            experienceItems[0].querySelector('.detail').textContent = 'Guitar Club Peripheral Design';
+            experienceItems[1].querySelector('.year').textContent = '2019';
+            experienceItems[1].querySelector('.detail').textContent = 'NTUT IXD Photograoher';
+            experienceItems[2].querySelector('.year').textContent = '2022';
+            experienceItems[2].querySelector('.detail').textContent = 'Pokémon Masters';
+            experienceItems[3].querySelector('.year').textContent = '2023';
+            experienceItems[3].querySelector('.detail').textContent = 'Top level Jujutsu Sorcerers';
 
-            // 顯示 button-group
-            const buttonGroup = card.querySelector('.button-group');
-            if (buttonGroup) {
-                buttonGroup.style.display = 'block'; // 顯示按鈕組
-            }
+            // 更新社交圖標連結
+            socialLinks[0].href = 'https://www.instagram.com/chiashannn/';
+            socialLinks[1].href = 'https://www.instagram.com/chiashannn/';
+        } else {
+            // 切換回 Lynn Lin
+            nameElement.textContent = 'Lynn Lin';
+            profilePicture.src = './img/lynnlin.jpg';
+            profilePicture.alt = 'Lynn Lin Picture';
+            contactItems[0].textContent = 'Taichung, Taiwan';
+            contactItems[1].textContent = 'sosigdsn@gmail.com';
+            contactItems[2].textContent = '+886 0983 080 321';
 
-            // 切換圖片
-            const cardInner = card.querySelector('.card-inner');
-            if (isFlipped) {
-                cardInner.style.transform = "rotateY(0deg)"; // 回到原來的圖片
-            } else {
-                cardInner.style.transform = "rotateY(180deg)"; // 切換到另一張圖片
-            }
-            isFlipped = !isFlipped; // 切換狀態
-        });
-    });
+            // 恢復教育背景
+            educationItems[0].querySelector('.year').textContent = '2017';
+            educationItems[0].querySelector('.detail').textContent = 'The Affiliated Senior High School of National Chung Hsing University';
+            educationItems[1].querySelector('.year').textContent = '2020';
+            educationItems[1].querySelector('.detail').textContent = 'Dept of Industrial Design - USC';
+            educationItems[2].querySelector('.year').textContent = '2022';
+            educationItems[2].querySelector('.detail').textContent = 'Dept of Interaction Design - NTUT';
+            educationItems[3].querySelector('.year').textContent = 'NOW';
 
-    
-    document.addEventListener('click', (event) => {
-        cards.forEach(card => {
-            const isExpanded = card.classList.contains('expanded');
-            if (isExpanded && !card.contains(event.target)) {
-                card.classList.remove('expanded'); // 縮小卡片
-                const cardInner = card.querySelector('.card-inner');
-                cardInner.style.transform = "rotateY(0deg)"; // 重置圖片
-            }
+            // 恢復工作經歷
+            experienceItems[0].querySelector('.year').textContent = '2018';
+            experienceItems[0].querySelector('.detail').textContent = 'Dance Showcase Merchandise Design';
+            experienceItems[1].querySelector('.year').textContent = '2020';
+            experienceItems[1].querySelector('.detail').textContent = 'SHCH Yearbook Cover Design';
+            experienceItems[2].querySelector('.year').textContent = '2021';
+            experienceItems[2].querySelector('.detail').textContent = 'Final Exhibition Graphic Design';
+            experienceItems[3].querySelector('.year').textContent = '2023';
+            experienceItems[3].querySelector('.detail').textContent = 'Creative Branding Project';
 
-            // 顯示 button-group
-            const buttonGroup = card.querySelector('.button-group');
-                if (buttonGroup) {
-                    buttonGroup.style.display = 'block'; // 顯示按鈕組
-                }
+            // 恢復社交圖標連結
+            socialLinks[0].href = 'https://www.instagram.com/sosigdsn/';
+            socialLinks[1].href = 'https://trello.com/b/U8KXll7k';
+        }
 
-        });
-    });
-});
-
-
-
+        isLynn = !isLynn; // 切換狀態
+    }
 </script>
 
 

@@ -235,6 +235,322 @@ nav{
 }
 
 /*------------------以上不要動-------------------*/
+/* ---------------- Content Box ---------------- */
+.content-box {
+    position: relative; /* 設置定位基準 */
+    background-color: #F0F0F0;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 30px;
+    margin: 80px 0 20px 90px; /* 使用上、右、下、左 */
+    width: 75%;
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; /* 區塊間距 */
+    align-items: flex-start;
+}
+
+/* Profile 區塊 */
+.profile {
+    flex: 0.7; /* 占 1 份空間 */
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img.profile-picture {
+    border-radius: 50px;
+    width: 180px;
+    height: 162px;
+    object-fit: cover;
+    margin-bottom: 0px;
+}
+
+.profile h2 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 35px;
+    color: #0000FF;
+    margin-top: 0px;
+    letter-spacing: 2px; 
+}
+
+
+
+/* 分隔線樣式 */
+.divider {
+    border: none; /* 移除預設邊框 */
+    border-top: 1px solid #000; /* 線條樣式 */
+    width: 100%; /* 線條寬度 */
+    margin: 10px auto; /* 與內容的上下距離 */
+}
+
+
+
+.contact-info {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.contact-item {
+    font-size: 15px;
+    display: flex;
+    align-items: center; /* 圖標與文字對齊 */
+    margin-bottom: 10px; /* 每行的間距 */
+    letter-spacing: 1px;
+}
+
+.contact-item .icon {
+    width: 20px; /* 圖標大小 */
+    height: 20px;
+    margin-right: 15px; /* 圖標與文字的間距 */
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* 圖標靠右對齊 */
+    gap: 10px; 
+    margin-top: 15px;
+}
+
+.social-icons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加過渡效果 */
+}
+
+.social-icons button img {
+    width: 30px; /* 圖標初始寬度 */
+    height: 30px; /* 圖標初始高度 */
+    transition: transform 0.3s ease, filter 0.3s ease; /* 添加過渡效果 */
+}
+
+.social-icons button:hover img {
+    transform: scale(1.2); /* 放大圖標 */
+}
+
+
+
+
+/* Education 和 Experience 區塊 */
+.education {
+    flex: 2; /* 占 2 份空間 */
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 20px;
+    
+}
+
+
+
+
+
+.education h3, .experience h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 12px;
+    margin-left: 15px;
+    letter-spacing: 2px;
+}
+
+
+
+.section-title {
+    background-color: #333; 
+    color: #fff; 
+    padding: 12px 20px; 
+    border-radius: 25px; 
+    display: inline-flex; /* 內聯 Flex 排列 */
+    align-items: center; 
+    gap: 8px; /* 與箭頭的間距 */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 箭頭圖標樣式 */
+.arrow-icon {
+    width: 18px; 
+    height: 18px; 
+}
+
+
+.education .year {
+    font-family: 'Chivo', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    padding-left: 20px;
+}
+
+
+
+.education .detail {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+/* Right column 包含 Experience 和 Skills */
+.right-column {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 8px; 
+}
+
+/* Experience 區塊 */
+.experience {
+    flex: 1; /* 保持占位比例 */
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+
+.experience .year {
+
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    padding-left: 15px;
+    line-height: 1;
+}
+
+
+.experience .detail {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    line-height: 1.4;
+    
+}
+
+/* Skills 按鈕 */
+.skills-section {
+    text-align: right; 
+    display: block; 
+    margin-top: 8px; 
+}
+
+/* Skills 按鈕 */
+.skills-section {
+    text-align: right; 
+    display: block; 
+    margin-top: 20px; 
+}
+
+.skills-button {
+    background-color: #000; 
+    color: #fff; 
+    width: 200px;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 30px;
+    font-size: 20px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin-left: auto; 
+    cursor: default; 
+}
+
+.skills-button img {
+    width: 30px; 
+    height: 30px;
+}
+
+/* 按鈕懸停時保持靜態 */
+.skills-button:hover {
+    background-color: #000; /* 保持原色 */
+}
+
+
+
+
+
+/* ---------------- Skills 列表 ---------------- */
+/* Skills List */
+.skills-list {
+    position: absolute; /* 使用絕對定位 */
+    top: 0; /* 將其對齊到 content-box 的頂部 */
+    right: -240px; /* 根據寬度調整到 content-box 的右邊 */
+    width: 240px; /* 固定寬度 */
+    height: 100%; /* 高度與 content-box 一致 */
+    background-color: #fff; /* 背景顏色 */
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 10px; /* 列表項之間的間距 */
+}
+
+.skill-item {
+    color: #0000FF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border: 1px solid #000;
+    border-radius: 30px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-item:hover {
+    background-color: #0000FF;
+    color: #fff;
+}
+
+.skill-item.active {
+    background-color: #0000FF;
+    color: #fff;
+}
+
+
+
+.change-button {
+    display: block;
+    margin: 20px auto 0 auto; 
+    padding: 20px 30px;
+    background-color: #0000FF;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-button:hover {
+    background-color: #000; /* 懸停時變更背景顏色 */
+}
+
+
+
+
+
 
 /*-------------------footer--------------------------*/
 footer {
